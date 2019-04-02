@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-  <link href="/css/app.css" rel="stylesheet"/>
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet"/>
 
   <nav class="navbar navbar-expand">
     <a class="navbar-brand" href="/shop">SHOP</a>
