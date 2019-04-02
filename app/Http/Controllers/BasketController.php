@@ -49,7 +49,7 @@ class BasketController extends Controller
 
         $product->save();
     
-        return redirect('/shop/basket/');
+        return redirect('/basket/');
 
     }
 
@@ -59,7 +59,7 @@ class BasketController extends Controller
         $id = $orders_to_products->id;
         Orders_to_products::find($id)->delete();
 
-        return redirect('/shop/basket/');
+        return redirect('/basket/');
 
     }
 

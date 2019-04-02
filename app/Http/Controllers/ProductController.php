@@ -47,7 +47,7 @@ class ProductController extends Controller
         
         $product->save();
         
-        return redirect('shop/admin/products');
+        return redirect('admin/products');
 
     }
 
@@ -69,7 +69,7 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect ('shop/admin/products');
+        return redirect ('admin/products');
 
     }
 
@@ -80,7 +80,7 @@ class ProductController extends Controller
 
         Product::find($id)->delete();
         
-        return redirect ('shop/admin/products');
+        return redirect ('admin/products');
          
     }
 

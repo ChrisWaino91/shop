@@ -48,7 +48,7 @@ class DepartmentsController extends Controller
         
         $department->save();
         
-        return redirect('shop/admin/departments');
+        return redirect('/admin/departments');
 
     }
 
@@ -72,7 +72,7 @@ class DepartmentsController extends Controller
 
         $department->save();
 
-        return redirect ('shop/admin/departments');
+        return redirect ('/admin/departments');
 
     }
 
@@ -80,7 +80,7 @@ class DepartmentsController extends Controller
 
         Departments::find($id)->delete();
         
-        return redirect ('shop/admin/departments');
+        return redirect ('/admin/departments');
          
     }
 
