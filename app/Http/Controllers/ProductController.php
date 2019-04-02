@@ -34,9 +34,9 @@ class ProductController extends Controller
     public function store(Request $request){
 
         $product = new Product;
+        $unique = uniqid();
+        $path = $request->file('product_image')->move("images/products", $request->product_title . $unique);
         
-        $path = $request->file('product_image')->move("images/products", 'test.webp');
-        dd($path); 
         // Try to turn this into a compact request when refactoring
         $product->title = $request->product_title;
         $product->description = $request->product_description;
