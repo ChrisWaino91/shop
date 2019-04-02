@@ -15,7 +15,7 @@ class CreateOrdersToProductsTable extends Migration
     {
         Schema::create('orders_to_products', function (Blueprint $table) {
             $table->Increments('id');
-            $table->string('basket')->unsigned();
+            $table->string('basket');
             $table->integer('product_id');
             $table->string('product_title');
             $table->integer('product_price');
