@@ -24,7 +24,7 @@ class Product extends Model
 
     public function imagePath(){
         
-        $path = 'storage' . substr($this->image_url, 6);
+        $path = $this->image_url;
         return $path;
 
     }
