@@ -35,7 +35,7 @@ class ProductController extends Controller
 
         $product = new Product;
         
-        $path = $request->file('product_image')->store('public/products');
+        $path = $request->file('product_image')->move("images/products", 'test.webp');
         
         // Try to turn this into a compact request when refactoring
         $product->title = $request->product_title;
