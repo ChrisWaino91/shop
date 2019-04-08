@@ -13,17 +13,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/departments/1">Chairs</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/departments/2">Stools</a>
-          </li>
+
+        <?php foreach ($departments_head as $department){
+          ?><li class="nav-item">
+          <a class="nav-link" href="<?php echo $department->path(); ?>"><?php echo $department->name;?></a>
+          </li><?php
+        }
+        ?>
+        
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item active"><a class="nav-link" href="/basket">Basket</a></li>
