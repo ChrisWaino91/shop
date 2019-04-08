@@ -11,11 +11,11 @@ class Departments extends Model
     protected $guarded = [];
     
     public function path(){
-        return "/shop/departments/{$this->id}";  
+        return "/departments/{$this->id}";  
     }
 
     public function adminPath(){
-        return "/shop/admin/departments/{$this->id}";  
+        return "/admin/departments/{$this->id}";  
     }
 
 

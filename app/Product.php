@@ -11,13 +11,13 @@ class Product extends Model
 
 
     public function adminPath(){
-        $path = '/shop/admin/products/' . $this->id;
+        $path = '/admin/products/' . $this->id;
         return $path;
     }
 
 
     public function path(){
-        $path = '/shop/product/' . $this->id;
+        $path = '/product/' . $this->id;
         return $path;
     }
 
