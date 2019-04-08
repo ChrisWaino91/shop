@@ -46,4 +46,4 @@
 
 Auth::routes();
 
-Route::get('shop/account', 'HomeController@index')->name('home');
+Route::get('/account', 'HomeController@index')->name('home');
