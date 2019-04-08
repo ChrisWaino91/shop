@@ -4,7 +4,7 @@
     <div class="content">
 
         <div class="jumbotron">
-            <div class="container">
+            <div class="container department-page">
                 <h1 class="h2"><?php echo $department->name?></h1>
                 <p class="department-description"><?php echo $department->description?></p>
             </div>

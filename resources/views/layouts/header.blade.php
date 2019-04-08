@@ -20,12 +20,15 @@
           <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
         </li>
 
-        <?php foreach ($departments_head as $department){
-          ?><li class="nav-item">
-          <a class="nav-link" href="<?php echo $department->path(); ?>"><?php echo $department->name;?></a>
-          </li><?php
-        }
-        ?>
+
+          <?php $i = 0; 
+           foreach ($departments_head as $department){
+              if(++$i > 6) break;
+                ?><li class="nav-item">
+                <a class="nav-link" href="<?php echo $department->path(); ?>"><?php echo $department->name;?></a>
+                </li><?php
+              }
+          ?>
         
       </ul>
       <ul class="navbar-nav">

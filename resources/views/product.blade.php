@@ -4,11 +4,11 @@
     <div class="content">
 
 
-        <div class="container">
+        <div class="container product-page">
             <div class="breadcrumbs">
                 <span class="breadcrumb-home"><a href="/">Home</a></span><span class="separator"> > </span><span class="breadcrumb-department"><a href="<?php echo $product->department->path()?>"><?php echo $product->department->name ?></a></span>
             </div>
-            <div class="row no-gutters">
+            <div class="row no-gutters top-product-content">
                <div class="col single-product-image mr-4">
                 <img src="<?php echo asset($product->imagePath()) ?>" alt="<?php echo $product->title ?>">
                </div>

@@ -10683,6 +10683,24 @@ a.text-dark:focus {
   margin-bottom: 3rem;
 }
 
+.navbar-expand .navbar-nav .nav-link {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  color: initial;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar-expand .navbar-nav .nav-link:hover {
+  background: #f5f5f5;
+  border-radius: 5%;
+  transition: 0.7s;
+}
+
+.navbar-brand {
+  color: initial;
+}
+
 .single-product-info .p-2 {
   margin-bottom: 1rem;
 }
@@ -10693,6 +10711,10 @@ a.text-dark:focus {
 
 .breadcrumbs {
   margin-bottom: 1.5rem;
+}
+
+.top-product-content .col {
+  justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
