@@ -30,7 +30,7 @@
                                         <td><?php echo $product->product_title ?></td>
                                         <td><?php echo $product->product_price ?></td>
                                         <td>
-                                            <form method="POST" action="/shop/basket/delete/{{$product->id}}">
+                                            <form method="POST" action="/basket/delete/{{$product->id}}">
                                                 {{ method_field('DELETE') }}
                                                 @csrf
                                                 <button type="submit" class="btn btn-light">Remove</button>

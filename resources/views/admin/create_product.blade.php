@@ -4,10 +4,10 @@
   
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Create New Product</h1>
-        <a href="/shop/admin/products/"><button class="btn btn-light">Cancel</button></a>
+        <a href="/admin/products/"><button class="btn btn-light">Cancel</button></a>
     </div>
      
-    <form method="POST" action="/shop/admin/products" enctype="multipart/form-data"> 
+    <form method="POST" action="/admin/products" enctype="multipart/form-data"> 
         @csrf
         <div class="form-group">
             <label for="product_title">Product Title</label>
@@ -44,7 +44,7 @@
             <small id="product_image_help" class="form-text text-muted">Recommended Size: 350px x 350px; must be an aspect ratio of 1:1.</small>
         </div>
         <button type="submit" class="btn btn-primary">Create Product</button>
-        <a href="/shop/admin/products/"><button class="btn btn-light">Cancel</button></a>
+        <a href="/admin/products/"><button class="btn btn-light">Cancel</button></a>
     </form>
 
 @endsection

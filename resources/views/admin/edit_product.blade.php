@@ -8,7 +8,7 @@
 
 
 
-<form method="POST" action="/shop/admin/products/{{$product->id}}" style="display:inline;">
+<form method="POST" action="/admin/products/{{$product->id}}" style="display:inline;">
   @csrf
   @method('patch')
   <div class="form-group">
@@ -43,11 +43,11 @@
   </div>
   <button type="submit" class="btn btn-primary">Save Product</button>
 </form>
-<form method="POST" action="/shop/admin/products/{{$product->id}}" style="display: inline;">
+<form method="POST" action="/admin/products/{{$product->id}}" style="display: inline;">
   {{ method_field('DELETE') }}
   @csrf
   <button type="submit" class="btn btn-danger">Delete Product</button>
-  <a href="/shop/admin"><button class="btn btn-light">Cancel</button></a>
+  <a href="/admin"><button class="btn btn-light">Cancel</button></a>
 </form>
 
 @endsection

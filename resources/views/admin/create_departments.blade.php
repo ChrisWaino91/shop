@@ -4,10 +4,10 @@
   
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Create New Department</h1>
-        <a href="/shop/admin/departments/"><button class="btn btn-light">Cancel</button></a>
+        <a href="/admin/departments/"><button class="btn btn-light">Cancel</button></a>
     </div>
     
-    <form method="POST" action="/shop/admin/departments" enctype="multipart/form-data"> 
+    <form method="POST" action="/admin/departments" enctype="multipart/form-data"> 
         @csrf
         <div class="form-group">
             <label for="department_title">Department Title</label>
@@ -20,7 +20,7 @@
             <small id="department_description_help" class="form-text text-muted">Here you can write a little information about the department in question that will display on the department landing page.</small>
         </div>
         <button type="submit" class="btn btn-primary">Create Department</button>
-        <a href="/shop/admin/departments/"><button class="btn btn-light">Cancel</button></a>
+        <a href="/admin/departments/"><button class="btn btn-light">Cancel</button></a>
     </form>
 
 @endsection

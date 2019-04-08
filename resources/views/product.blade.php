@@ -6,14 +6,14 @@
 
         <div class="container">
             <div class="breadcrumbs">
-                <span class="breadcrumb-home"><a href="/shop">Home</a></span><span class="separator"> > </span><span class="breadcrumb-department"><a href="<?php echo $product->department->path()?>"><?php echo $product->department->name ?></a></span>
+                <span class="breadcrumb-home"><a href="/">Home</a></span><span class="separator"> > </span><span class="breadcrumb-department"><a href="<?php echo $product->department->path()?>"><?php echo $product->department->name ?></a></span>
             </div>
             <div class="row no-gutters">
                <div class="col single-product-image mr-4">
                 <img src="<?php echo asset($product->imagePath()) ?>" alt="<?php echo $product->title ?>">
                </div>
                <div class="col d-flex flex-column">
-                    <form method="POST" action="/shop/basket/add" enctype="multipart/form-data"> 
+                    <form method="POST" action="/basket/add" enctype="multipart/form-data"> 
                         @csrf
                         <input type="hidden" id="product_id" name="product_id" value="<?php echo $product->id ?>">
                       

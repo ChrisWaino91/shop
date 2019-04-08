@@ -4,7 +4,7 @@
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Products</h1>
-    <a href="/shop/admin/products/create"><button class="btn btn-primary">Add New Product</button></a>
+    <a href="/admin/products/create"><button class="btn btn-primary">Add New Product</button></a>
   </div>
 
 <table class="table table-hover">
