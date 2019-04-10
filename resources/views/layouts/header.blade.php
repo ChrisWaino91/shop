@@ -34,18 +34,6 @@
       <ul class="navbar-nav">
         <li class="nav-item active"><a class="nav-link" href="/basket">Basket</a></li>
       </ul>
-          @if (Route::has('login'))
-              <ul class="navbar-nav">
-                  @auth
-                  @else
-                      <li class="nav-item active"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-
-                      @if (Route::has('register'))
-                      <li class="nav-item active"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
-                      @endif
-                  @endauth
-              </ul>
-          @endif
 
     </div>
   </nav>

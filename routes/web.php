@@ -17,9 +17,11 @@
     Route::get('/', 'HomeController@index'); 
     Route::get('/departments/{department}', 'DepartmentsController@show');
     Route::get('/product/{product}', 'ProductController@show');
-    Route::get('/basket/', 'BasketController@show'); 
+    Route::get('/basket/', 'BasketController@edit'); 
     Route::post('/basket/add', 'BasketController@store'); 
     Route::delete('/basket/delete/{orders_to_products}','BasketController@destroy');
+    Route::post('/basket/confirmation', 'CustomerController@store');
+    Route::get('/basket/confirmation', 'BasketController@show');
 
 // Admin Routes
 

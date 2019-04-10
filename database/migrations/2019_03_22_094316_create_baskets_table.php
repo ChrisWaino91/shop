@@ -17,7 +17,7 @@ class CreateBasketsTable extends Migration
             $table->Increments('id');
             $table->string('session_id');
             $table->integer('customer')->unsigned()->nullable();
-            $table->foreign('customer')->references('id')->on('users');
+            $table->foreign('customer')->references('id')->on('customers');
             $table->integer('total')->nullable();
             $table->boolean('completed');
             $table->timestamps();

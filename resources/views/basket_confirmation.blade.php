@@ -20,7 +20,6 @@
                             <th scope="col">Reference</th>
                             <th scope="col">Product</th>
                             <th scope="col">Price</th>
-                            <th scope="col"></th>
                         </tr>
                         </thead>
                         <tbody>
@@ -29,14 +28,6 @@
                                     <th scope="row"><?php echo $product->product_id ?></th>
                                     <td><?php echo $product->product_title ?></td>
                                     <td><?php echo $product->product_price ?></td>
-                                    <td>
-                                        <form method="POST" action="/basket/delete/{{$product->id}}">
-                                            {{ method_field('DELETE') }}
-                                            @csrf
-                                            <button type="submit" class="btn btn-light">Remove</button>
-                                        </form>
-                                        
-                                    </td>
                                 </tr> <?php
                             } ?>
                                 <tr>
@@ -47,25 +38,35 @@
                         </tbody>
                     </table>
 
+                    <h2 class="h2 mt-4 mb-4">Delivery Details</h2>
+                    <table class="table confirmation-table mb-4">
+                        <thead>
+                            <tr>
+                                <th scope="col">Forename</th>
+                                <th scope="col">Surname</th>
+                                <th scope="col">Email Address</th>
+                                <th scope="col">Total Payment Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><?php echo $customer_info[0]->forename; ?></th>
+                                <td><?php echo $customer_info[0]->surname; ?></td>
+                                <td><?php echo $customer_info[0]->email;  ?></td>
+                                <td><?php echo '£' . $total; ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <h2 class="h2 mt-4 mb-4">Checkout</h2>
-
-                    <form action="/basket/confirmation" method="POST">
+                    <form action="/basket/success" method="POST">
                         @csrf
-                        <div class="form-group">
-                            <label for="forename">Forename</label>
-                            <input type="text" class="form-control" id="forename" name="forename" placeholder="Forename">
+                        <input type="hidden" name="forename" value="<?php echo $customer_info[0]->forename;?>">
+                        <input type="hidden" name="surname" value="<?php echo $customer_info[0]->surname;?>">
+                        <input type="hidden" name="email" value="<?php echo $customer_info[0]->email;?>">
                         </div>
-                        <div class="form-group">
-                            <label for="Surname">Surname</label>
-                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname">
-                        </div>
-                        <div class="form-group">
-                            <label for="forename">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="First Name">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Checkout</button>
+                        <button type="submit" class="btn btn-primary m-auto">Confirm Purchase</button>
                     </form>
+
                 </div>
             </div>
         </div>
