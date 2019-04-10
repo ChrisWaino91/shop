@@ -1626,6 +1626,7 @@ pre code {
 .table th,
 .table td {
   padding: 0.75rem;
+  vertical-align: top;
   border-top: 1px solid #dee2e6;
 }
 
@@ -10755,5 +10756,10 @@ main.dashboard,
 .clickable-row th,
 .clickable-row td {
   padding: 0;
+}
+
+.order_row td,
+.order_row th {
+  padding: 0.75rem;
 }
 

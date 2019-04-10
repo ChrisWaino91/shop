@@ -36,7 +36,7 @@ class BasketController extends Controller
         $basket = new Basket; 
 
         $basket->session_id = session()->getId();
-        $basket->customer = null;
+        $basket->customer_id = null;
         $basket->completed = false; 
 
         $basket->save();
@@ -66,8 +66,8 @@ class BasketController extends Controller
             $total = $total + $single;
         }
 
-        $current_customer = DB::select("SELECT DISTINCT customer FROM baskets WHERE session_id = '$session'");
-        $current_customer = $current_customer[0]->customer;
+        $current_customer = DB::select("SELECT DISTINCT customer_id FROM baskets WHERE session_id = '$session'");
+        $current_customer = $current_customer[0]->customer_id;
 
         $customer_info = DB::select("SELECT * FROM customers WHERE id = '$current_customer'");
         
@@ -101,4 +101,29 @@ class BasketController extends Controller
 
     }
 
+
+    public function show_admin(Basket $basket, Orders_to_products $orders_to_products){
+
+        // Used Eloquent rather than raw SQL to retrieve completed only orders and set them to workable var passed to view
+        $completed_orders = Basket::where('completed', 1)->get();
+        
+
+        
+        // 
+        $session = session()->getId();
+        
+        $products = DB::select("SELECT * from orders_to_products WHERE basket = '$session'");
+        $total = 0;
+
+        foreach ($products as $product){
+            $single = $product->product_price;
+            $total = $total + $single;
+        }
+
+
+
+        return view('admin.orders', compact('completed_orders', 'total'));
+    }
+
 }
+

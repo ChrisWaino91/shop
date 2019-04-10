@@ -43,6 +43,8 @@
         Route::patch('/admin/departments/{department}', 'DepartmentsController@update'); 
         Route::delete('/admin/departments/{department}', 'DepartmentsController@destroy');
 
+        Route::get('/admin/orders', 'BasketController@show_admin');
+
     });
 
 // Other

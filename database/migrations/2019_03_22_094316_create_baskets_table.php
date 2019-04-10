@@ -16,8 +16,7 @@ class CreateBasketsTable extends Migration
         Schema::create('baskets', function (Blueprint $table) { 
             $table->Increments('id');
             $table->string('session_id');
-            $table->integer('customer')->unsigned()->nullable();
-            $table->foreign('customer')->references('id')->on('customers');
+            $table->integer('customer_id')->unsigned()->nullable()->references('id')->on('customers');
             $table->integer('total')->nullable();
             $table->boolean('completed');
             $table->timestamps();

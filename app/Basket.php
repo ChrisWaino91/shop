@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Controller;
+use App\Customer;
 
 class Basket extends Model
 {
@@ -12,6 +13,6 @@ class Basket extends Model
         }
 
     public function customer(){
-        return $this->belongsTo('App\Customer');
+        return $this->belongsTo(Customer::class);
         }
 }

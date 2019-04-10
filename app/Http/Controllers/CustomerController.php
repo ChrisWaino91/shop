@@ -33,7 +33,7 @@ class CustomerController extends Controller
 
         $current_customer = $current_customer[0]->id;
         
-        $current_basket = DB::update("UPDATE baskets SET customer = '$current_customer' WHERE session_id = '$current_session'");
+        $current_basket = DB::update("UPDATE baskets SET customer_id = '$current_customer' WHERE session_id = '$current_session'");
     
         return redirect('/basket/confirmation');
 
