@@ -22,6 +22,7 @@
     Route::delete('/basket/delete/{orders_to_products}','BasketController@destroy');
     Route::post('/basket/confirmation', 'CustomerController@store');
     Route::get('/basket/confirmation', 'BasketController@show');
+    Route::post('/basket/success', 'BasketController@success');
 
 // Admin Routes
 

@@ -3,11 +3,7 @@
 @section('content')
     <div class="content">
 
-        <div class="jumbotron">
-            <div class="container">
-                <h1 class="h2">My Basket</h1>
-            </div>
-        </div>        
+       v
 
 
         <div class="container">
@@ -57,16 +53,16 @@
                             </tr>
                         </tbody>
                     </table>
-
-                    <form action="/basket/success" method="POST">
-                        @csrf
-                        <input type="hidden" name="forename" value="<?php echo $customer_info[0]->forename;?>">
-                        <input type="hidden" name="surname" value="<?php echo $customer_info[0]->surname;?>">
-                        <input type="hidden" name="email" value="<?php echo $customer_info[0]->email;?>">
-                        </div>
-                        <button type="submit" class="btn btn-primary m-auto">Confirm Purchase</button>
-                    </form>
-
+                    <div class="confirm-purchase mt-4">
+                        <form action="/basket/success" method="POST">
+                            @csrf
+                            <input type="hidden" name="forename" value="<?php echo $customer_info[0]->forename;?>">
+                            <input type="hidden" name="surname" value="<?php echo $customer_info[0]->surname;?>">
+                            <input type="hidden" name="email" value="<?php echo $customer_info[0]->email;?>">
+                            </div>
+                            <button type="submit" class="btn btn-primary m-auto">Confirm Purchase</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -72,8 +72,22 @@ class BasketController extends Controller
         $customer_info = DB::select("SELECT * FROM customers WHERE id = '$current_customer'");
         
         return view('basket_confirmation', compact('products', 'total', 'customer_info'));
+    }
 
 
+    public function success(Request $request){
+
+        $session = session()->getId();
+        $forename = $request->forename;
+
+        $order_id = DB::select("SELECT id FROM baskets WHERE session_id = '$session'");
+        DB::update("UPDATE baskets SET completed = 1 WHERE session_id = '$session'");
+
+
+        $order_id = $order_id[0]->id;
+
+        
+        return view('basket_success', compact('order_id', 'forename'));
     }
 
 
