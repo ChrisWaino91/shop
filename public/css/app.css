@@ -10701,6 +10701,11 @@ a.text-dark:focus {
   color: initial;
 }
 
+.table th,
+.table td {
+  vertical-align: initial;
+}
+
 .single-product-info .p-2 {
   margin-bottom: 1rem;
 }
